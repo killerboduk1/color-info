@@ -82,7 +82,7 @@
                     document.getElementById("response_color").innerHTML = template;
 
                     //change body background color according to the color
-                    document.getElementsByTagName("body")[0].style.backgroundColor = data.data.name;
+                    document.getElementsByTagName("body")[0].style.background = data.data.hex_code;
                 }).catch(error => console.log("Unable to fetch data:", error));
         }
 
