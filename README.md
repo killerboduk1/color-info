@@ -1,5 +1,12 @@
 # Installation
 
+Im using Laravel Framework 10.45.1 as I created this project.
+php version 8.3.1.
+I used database seeder to populate the database with some color names and their hex and rgb codes. 
+
+In the front end, I used a simple form to get the color name from the user and display the color name, hex code, and rgb code.
+
+
 - Clone the repository
 - cd to the project directory "color-info"
 - Copy the .env.example file to .env and fill in the necessary information
@@ -51,3 +58,29 @@ php artisan serve
 ```
 ### screenshot
 ![screenshot2.png](screenshot2.png)
+
+# Files used
+
+I'm using Laravel Framework 10.45.1 as I created this project.
+
+List of all the files used or edited in this project.
+
+Controllers and Resources
+- app/Http/Controllers/ColorApiController.php
+- app/Http/Resources/ColorResource.php
+
+Models
+- app/Models/Color.php
+
+Database
+- database/migrations/2024_02_23_103941_create_colors_table.php
+
+Seeders
+- database/seeders/ColorSeeder.php
+
+Routes
+- routes/api.php
+- routes/web.php
+
+Views
+- resources/views/welcome.blade.php
