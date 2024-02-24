@@ -62,8 +62,6 @@ php artisan serve
 
 # Files used
 
-I'm using Laravel Framework 10.45.1 as I created this project.
-
 List of all the files used or edited in this project.
 
 Controllers and Resources
