@@ -85,3 +85,25 @@ Routes
 
 Views
 - resources/views/welcome.blade.php
+
+# Unit Testing
+
+- Run the following command to run the unit tests
+```bash
+php artisan test
+```
+- You should get a response similar to the following
+```bash
+  PASS  Feature\ColorApiTest
+  ✓ the application returns a successful response                                                                                                                                                          0.05s  
+  ✓ the application returns a not found color response                                                                                                                                                     0.01s  
+  ✓ the application returns a found color response                                                                                                                                                         0.01s  
+
+  Tests:    3 passed (3 assertions)
+```
+
+# Unit Testing Files
+
+- tests/Feature/ColorApiTest.php
+
+

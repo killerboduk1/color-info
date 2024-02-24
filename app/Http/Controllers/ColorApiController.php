@@ -18,17 +18,21 @@ class ColorApiController extends Controller
      */
     public function getColor(string $color): mixed
     {
-        //check if the color is in the list of colors
-        $color = Color::where('name', strtolower($color))->first();
+        try {
+            //check if the color is in the list of colors
+            $color = Color::where('name', strtolower($color))->first();
 
-        //return the message if not found
-        if (!$color) {
-            return [
-                'message' => 'Color not found'
-            ];
+            //return the message if not found
+            if (!$color) {
+                return [
+                    'message' => 'Color not found'
+                ];
+            }
+
+            //return the color if found
+            return new ColorResource($color);
+        } catch (\Exception $e) {
+            return response()->json(['message' => $e->getMessage()], 500);
         }
-
-        //return the color if found
-        return new ColorResource($color);
     }
 }
