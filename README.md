@@ -1,7 +1,7 @@
 # Installation
 
 - Clone the repository
-- cd to the project directory 
+- cd to the project directory "color-info"
 - Copy the .env.example file to .env and fill in the necessary information
 ```dotenv
 DB_CONNECTION=mysql
@@ -14,6 +14,7 @@ DB_PASSWORD=password
 - Run the following commands
 ```bash
 composer install
+php artisan key:generate
 php artisan migrate:fresh --seed
 ```
 - Run the following command to start the server
