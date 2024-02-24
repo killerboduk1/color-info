@@ -32,12 +32,15 @@
 </body>
 
 <script>
+    //submit the form or user git enter
     function submitForm(event) {
         event.preventDefault();
         getColor();
     }
 
     function getColor() {
+
+        // template for the response
         let template = `
             <h1 class="text-2xl font-bold tracking-tight text-gray-900 pt-5">Color Match</h1>
             <table class="table-auto" id="respons_template">
@@ -56,11 +59,10 @@
             </table>
         `;
 
-        //document.getElementById("getColor").addEventListener("click", function () {
         let color = document.getElementById('color').value;
 
         if (color !== '') {
-
+            //fetch the color data
             let url = '{{ URL::to('/') }}/api/color/' + color;
 
             fetch(url)
@@ -84,7 +86,6 @@
                 }).catch(error => console.log("Unable to fetch data:", error));
         }
 
-        // });
     }
 
 </script>
