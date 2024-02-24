@@ -6,6 +6,7 @@ I used database seeder to populate the database with some color names and their 
 
 In the front end, I used a simple form to get the color name from the user and display the color name, hex code, and rgb code.
 
+## Steps
 
 - Clone the repository
 - cd to the project directory "color-info"
