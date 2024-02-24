@@ -1,9 +1,10 @@
 <!doctype html>
-<html>
+<html lang="EN">
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <script src="https://cdn.tailwindcss.com"></script>
+    <title>Color Info</title>
 </head>
 <body>
 
@@ -31,6 +32,11 @@
 </body>
 
 <script>
+    function submitForm(event) {
+        event.preventDefault();
+        getColor();
+    }
+
     function getColor() {
         let template = `
             <h1 class="text-2xl font-bold tracking-tight text-gray-900 pt-5">Color Match</h1>
@@ -80,9 +86,6 @@
 
         // });
     }
-
-    // initialize the function for the button
-    document.getElementById("getColor").onclick = getColor;
 
 </script>
 
