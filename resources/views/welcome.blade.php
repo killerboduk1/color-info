@@ -70,6 +70,7 @@
                 .then(data => {
                     if (data.message === "Color not found") {
                         document.getElementById("response_color").innerHTML = `<h1 class="text-2xl font-bold tracking-tight text-gray-900 pt-5">Color not found!</h1>`;
+                        document.getElementsByTagName("body")[0].style.background = "#ffffff";
                         return;
                     }
 
