@@ -6,6 +6,7 @@ namespace App\Http\Controllers;
 
 use App\Http\Resources\ColorResource;
 use App\Models\Color;
+use Illuminate\Support\Facades\Validator;
 
 class ColorApiController extends Controller
 {
@@ -18,6 +19,16 @@ class ColorApiController extends Controller
      */
     public function getColor(string $color): mixed
     {
+        // Validate the request parameters
+        $validator = Validator::make(['color' => $color], [
+            'color' => 'required|string',
+        ]);
+
+        // Check if validation fails
+        if ($validator->fails()) {
+            return response()->json(['message' => $validator->errors()->first()], 422);
+        }
+
         try {
             //check if the color is in the list of colors
             $color = Color::where('name', strtolower($color))->first();
